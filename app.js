@@ -14,7 +14,8 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.engine('.html', require('ejs').__express);
+app.set('view engine', 'html');
 
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -36,14 +37,16 @@ app.get('/', function(req, res) {
     console.log("typeof util:" + typeof util);
     console.log("base: " + util.exSetup);
     console.log("rates: " + util.exSetup);
-    res.render('index', {
+    res.render('index.html', {
         base: util.exSetup.base,
-        rates: util.exSetup.rates
+        rates: JSON.stringify(util.exSetup.rates)
     });
 
     console.log("typeof ex: " + typeof ex);
 });
-app.get('/users', user.list);
+
+
+// app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
