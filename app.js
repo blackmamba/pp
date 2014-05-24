@@ -3,8 +3,8 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
+// var routes = require('./routes');
+// var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var util = require('myutil');
@@ -22,7 +22,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(app.router);
+// app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -34,17 +34,17 @@ if ('development' == app.get('env')) {
 // app.get('/', routes.index);
 
 app.get('/', function(req, res) {
-    console.log("typeof util:" + typeof util);
-    console.log("base: " + util.exSetup);
-    console.log("rates: " + util.exSetup);
-    res.render('index.html', {
-        base: util.exSetup.base,
-        rates: JSON.stringify(util.exSetup.rates)
+    // console.log("typeof util:" + typeof util);
+    // console.log("base: " + util.exSetup);
+    // console.log("rates: " + util.exSetup);
+    res.render('index.ejs', {
+        title: 'currency conversion',
+        base: util.exSetup.base,    
+        rates: util.exSetup.rates
     });
 
-    console.log("typeof ex: " + typeof ex);
+    // console.log("typeof ex: " + typeof ex);
 });
-
 
 // app.get('/users', user.list);
 

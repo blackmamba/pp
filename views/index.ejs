@@ -1,0 +1,50 @@
+<% include header %>
+<div class="container">
+    <h1><%=title%></h1>
+    <form class="form-horizontal" role="form">
+        <div class="row">
+            <div class="col-xs-4">
+                <input class="form-control" type="value"  placeholder="please enter a number" required autofocus>
+            </div>
+            <div class="col-xs-4">
+                <input class="form-control" type="value"  placeholder="result"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <label for="from">from:</label>
+                <select name="from" id="from" class"form-control">
+                    <% for (rate in rates) {
+                    if (base === rate) {%>
+                    <option selected="selected"><%= rate %></option>
+                    <%} else {%>
+                    
+                    <option><%= rate %></option>
+                    
+                    <%}}; %>
+                </select>
+                
+            </div>
+            <div class="col-xs-4">
+                <label for="to">to:</label>
+                <select name="to" id="to" class"form-control">
+                    <% for (rate in rates) { %>
+                    console.log(rate);
+                    <option><%= rate%></option>
+                    
+                    <% }; %>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Convert</button>
+            </div>
+        </div>
+        
+    </form>
+    
+    </div> <!-- /container -->
+    <%include jquery %>
+    <script src="/public/main.js"></script>
+    <% include footer %>

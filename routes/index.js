@@ -4,5 +4,6 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express', base: res.base, rates: res.rates });
+  console.log("index.js called");
+  res.render('index.html', { title: 'Express', base: res.base, rates: res.rates });
 };
