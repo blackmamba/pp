@@ -3,8 +3,10 @@ PP
 
 This is an express based web app. It runs on NodeJS. It also contains two modules namely:
 
-    - ex - exchanger for currency conversion. This module is based on money.js. However its modified to pull live data from 'openexchangerates.org'
-    - myutil - This modules provides utility for making asynchronous http call. Which is used to pull data from 'openexchangerates.org'
+    - ex: 
+        - exchanger for currency conversion. This module is based on money.js. However its modified to pull live data from 'openexchangerates.org'
+    - myutil: 
+        - This modules provides utility for making asynchronous http call. Which is used to pull data from 'openexchangerates.org'
 
 
 Following modules are used for developing and testing this app:
