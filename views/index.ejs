@@ -4,14 +4,11 @@
     <form class="form-horizontal" role="form">
         <div class="row">
             <div class="col-xs-4">
-                <input class="form-control" type="value"  placeholder="please enter a number" required autofocus>
-            </div>
-            <div class="col-xs-4">
-                <input class="form-control" type="value"  placeholder="result"/>
+                <input class="form-control" name="val" type="value"  placeholder="please enter a number" required autofocus>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">
+            <div class="col-xs-2">
                 <label for="from">from:</label>
                 <select name="from" id="from" class"form-control">
                     <% for (rate in rates) {
@@ -25,7 +22,7 @@
                 </select>
                 
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-2">
                 <label for="to">to:</label>
                 <select name="to" id="to" class"form-control">
                     <% for (rate in rates) { %>
@@ -41,10 +38,15 @@
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Convert</button>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <input class=" result form-control" type="value"  placeholder="result"/>
+            </div>
+        </div>
         
     </form>
     
     </div> <!-- /container -->
     <%include jquery %>
-    <script src="/public/main.js"></script>
+    <script src="/javascripts/main.js"></script>
     <% include footer %>

@@ -5,3 +5,9 @@ body {
 a {
   color: #00b7ff;
 }
+.result {
+  background-color: #fbf9ea;
+}
+.row {
+  margin-top: 15px;
+}

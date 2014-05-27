@@ -2,18 +2,21 @@ window.pp = window.pp || {};
 
 pp.convert = {
     init: function() {
-        $('button[type="submit"]').on('click', this.onclick);
+
+        $('form').on('submit', this.onclick);
 
     },
 
-    onclick: function() {
+    onclick: function(e) {
+        e.preventDefault();
         $.ajax({
-            url: "/convert",
+            url: "/convert" + '?' + $(this).serialize(),
             context: document.body
-        }).done(function() {
-            $(this).addClass("done");
+        }).done(function(data) {
+            $('.result').val(data.result);
         });
     }
 
 
-}
+};
+pp.convert.init();
