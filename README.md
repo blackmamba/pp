@@ -1,7 +1,7 @@
 PP
 =========
 
-This is an express based web app. It runs on NodeJS. It also contains two modules namely:
+This is an express based web app which demonstrates currency conversion. It runs on NodeJS. It also contains two custom written modules under node_modules namely:
 
     - ex: 
         - exchanger for currency conversion. This module is based on money.js. However its modified to pull live data from 'openexchangerates.org'
