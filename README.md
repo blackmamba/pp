@@ -32,3 +32,4 @@ open http://localhost:3000
 Credits
 --------------
 http://josscrowcroft.github.io/money.js/
+http://openexchangerates.org
