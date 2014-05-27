@@ -18,11 +18,10 @@ Following modules are used for developing and testing this app:
     - "chai": "*"
 
 
-Installation
+How to run this app
 --------------
 
 ```sh
-How to run this app:
 git clone https://github.com/blackmamba/pp.git
 cd pp
 npm install
