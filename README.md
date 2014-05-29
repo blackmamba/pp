@@ -10,12 +10,12 @@ This is an express based web app which demonstrates currency conversion. It runs
 
 
 Following modules are used for developing and testing this app:
-    - "express": "3.4.8",
-    - "stylus": "*",
-    - "ejs": "~0.8.5",
-    - "async":"0.9.0",
-    - "mocha": "*",
-    - "chai": "*"
+   - "express": "3.4.8",
+   - "stylus": "*",
+   - "ejs": "~0.8.5",
+   - "async":"0.9.0",
+   - "mocha": "*",
+   - "chai": "*"
 
 
 How to run this app
@@ -28,6 +28,11 @@ npm install
 node app.js
 open http://localhost:3000
 ```
+
+Hosting
+--------------
+This application is hosted on Heroku at: 
+[http://floating-refuge-8806.herokuapp.com/](http://floating-refuge-8806.herokuapp.com/ "exchanger app")
 
 Credits
 --------------
