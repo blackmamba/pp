@@ -9,13 +9,16 @@ This is an express based web app which demonstrates currency conversion. It runs
         - This modules provides utility for making asynchronous http call. Which is used to pull data from 'openexchangerates.org'
 
 
-Following modules are used for developing and testing this app:
+Following modules and libraries are used for developing and testing this app:
    - "express": "3.4.8",
    - "stylus": "*",
    - "ejs": "~0.8.5",
    - "async":"0.9.0",
    - "mocha": "*",
-   - "chai": "*"
+   - "chai": "*",
+   - "Bootstrap": "3.0",
+   - "jQuery": "1.11.0",
+   - "fontawesome": "4.1.0"
 
 
 How to run this app
