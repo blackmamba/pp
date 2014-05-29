@@ -1,52 +1,54 @@
 <% include header %>
 <div class="container">
     <h1><%=title%></h1>
-    <form class="form-horizontal" role="form">
+    <form class="form-horizontal has-feedback" role="form">
         <div class="row">
             <div class="col-xs-12">
-                <input class="form-control" name="val" type="value"  placeholder="please enter a number" required autofocus>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6">
-                <label for="from">from:</label>
-                <select name="from" id="from" class"form-control">
-                    <% for (rate in rates) {
-                    if (base === rate) {%>
-                    <option selected="selected"><%= rate %></option>
-                    <%} else {%>
-                    
-                    <option><%= rate %></option>
-                    
-                    <%}}; %>
-                </select>
+                <div class="input-group">
+                    <input class="form-control" name="val" type="number"  placeholder="please enter a number" required autofocus>
+                    <span class="input-group-addon">.00</span>
+                    </input>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="from">from:</label>
+                        <select name="from" id="from" class"form-control">
+                            <% for (rate in rates) {
+                            if (base === rate) {%>
+                            <option selected="selected"><%= rate %></option>
+                            <%} else {%>
+                            
+                            <option><%= rate %></option>
+                            
+                            <%}}; %>
+                        </select>
+                        
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="to">to:</label>
+                        <select name="to" id="to" class"form-control">
+                            <% for (rate in rates) { %>
+                            console.log(rate);
+                            <option><%= rate%></option>
+                            
+                            <% }; %>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Convert</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input class=" result form-control" type="value"  placeholder="result"/>
+                    </div>
+                </div>
                 
-            </div>
-            <div class="col-xs-6">
-                <label for="to">to:</label>
-                <select name="to" id="to" class"form-control">
-                    <% for (rate in rates) { %>
-                    console.log(rate);
-                    <option><%= rate%></option>
-                    
-                    <% }; %>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Convert</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <input class=" result form-control" type="value"  placeholder="result"/>
-            </div>
-        </div>
-        
-    </form>
-    
-    </div> <!-- /container -->
-    <%include jquery %>
-    <script src="/javascripts/main.js"></script>
-    <% include footer %>
+            </form>
+            
+            </div> <!-- /container -->
+            <%include jquery %>
+            <script src="/javascripts/main.js"></script>
+            <% include footer %>
