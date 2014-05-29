@@ -4,7 +4,7 @@ pp.convert = {
     init: function() {
         var that = this;
         $('form').on('submit', this.onclick);
-        $('select').on('focus', this.preserveOldVal);
+        // $('select').on('focus', this.preserveOldVal);
         $('select').on('change', this.handleSelectChange.bind(this));
         $('select').each(function(index, element) {
             var el = $(element);
@@ -50,7 +50,7 @@ pp.convert = {
             $('input.result ~ i').removeClass().addClass('fa-' + symbol + this.baseClasses);
 
         }
-        this.preserveOldVal(e);
+        // this.preserveOldVal(e);
 
     }
     
