@@ -8,6 +8,10 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var util = require('myutil');
+global.exSetup = {
+    from: 'USD',
+    to: 'INR'
+};
 var ex = require('ex');
 var app = express();
 
