@@ -10,12 +10,12 @@ This is an express based web app which demonstrates currency conversion. It runs
 
 
 Following modules are used for developing and testing this app:
-    - "express": "3.4.8",
-    - "stylus": "*",
-    - "ejs": "~0.8.5",
-    - "async":"0.9.0",
-    - "mocha": "*",
-    - "chai": "*"
+   - "express": "3.4.8",
+   - "stylus": "*",
+   - "ejs": "~0.8.5",
+   - "async":"0.9.0",
+   - "mocha": "*",
+   - "chai": "*"
 
 
 How to run this app
