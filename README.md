@@ -36,5 +36,5 @@ This application is hosted on Heroku at:
 
 Credits
 --------------
-http://josscrowcroft.github.io/money.js/
-http://openexchangerates.org
+- http://josscrowcroft.github.io/money.js/
+- http://openexchangerates.org
